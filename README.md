@@ -29,7 +29,7 @@ There are 3 kinds of utility functions that parse the information from dataset: 
 - sample codes (*done* : 3 programs are available)
 - 2 algorithms, AAM and LBF (*done*)
 
-\
+
 #### Some new functionalities that were not proposed but developed during the coding period:
 - Extra parameter for the fitting function.\
 Each face landmark detector might needs their own parameters in the fitting process. Some parameter are fixed in all the time but some other might changes according to the input data. In the case of fixed parameter, the developer can just add this parameter as the member of `Params`. However, in the case of dynamic parameter, the fitting function should allow extra parameter in the runtime. Hence the optional extra parameter is added to the fitting function by passing it as void parameter (`void* extra_params`) which can holds any types of parameter.
@@ -194,8 +194,11 @@ for(int j=0;j<rects.size();j++){
 cv::imshow("detection", frame);
 ```
 
-#### some possible future improvements
-asd asd asd
+#### some possible future improvements and un-executed ideas
+1. There many possibilities to use parallelization in both implementation of LBF and AAM algorithms. Currently the parallelization is not implemented for both of them.
+2. The AAM algorithm produce big-sized training model since it basically store all the face region from the dataset. An alternative to reduce this trained model size is by limiting the size of the base shape. The faces region are wrapped into the base shape. If the base shape is resized into smaller size, then each wrapped face region will be stored in smaller size.  
+3. As explained in the previous part, the dependency to libnear can be eliminated.
+4. The performance and processing time analysis is not yet provided. It will be useful to provide this information so that the end user could pick their setting based on the assessment data. As an example, in the LBF algorithm, the performance and processing speed changes according to number of the refinement stages, amount of depth and number of trees. Currently, the result as demonstrated in the [video][vid_lbf] works at 50~90fps for both face detection and landmark fitting. However, the user might try other setting to get their desired result. If the comparison data is provided, it will be beneficial for the user.
 
 ## The Facemark LBF algorithm
 ![UML of the FacemarkLBF][uml_lbf]
