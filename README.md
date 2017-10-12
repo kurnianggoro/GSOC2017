@@ -320,4 +320,4 @@ facemark->fit(image, faces, landmarks);
 [tutorials]: http://pullrequest.opencv.org/buildbot/export/pr_contrib/1257/docs/d5/d47/tutorial_table_of_content_facemark.html
 [aam_code_ori]: https://ibug.doc.ic.ac.uk/download/tzimiro_iccv2013_code.zip
 [lbf_cod_ori]: https://github.com/luoyetx/face-alignment-at-3000fps
-[lbf_model]: https://drive.google.com/file/d/0BxCn8qoSV5g2UDd0aHo3TmFqdTg/view?usp=sharing
+[lbf_model]: https://raw.githubusercontent.com/kurnianggoro/GSOC2017/master/data/lbfmodel.yaml
