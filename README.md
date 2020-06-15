@@ -3,7 +3,9 @@
 Student: Laksono kurnianggoro\
 Mentor: Delia Passalacqua\
 Link to commits: https://github.com/opencv/opencv_contrib/pull/1257/commits \
-Link to codes: https://github.com/opencv/opencv_contrib/pull/1257/files
+Link to codes: https://github.com/opencv/opencv_contrib/pull/1257/files \
+Merged codes: https://github.com/opencv/opencv_contrib/tree/master/modules/face \
+Usage: https://docs.opencv.org/3.4.10/d5/d47/tutorial_table_of_content_facemark.html
 
 ## Introduction
 
@@ -283,7 +285,7 @@ if(conf.size()>0){
 
 The LBF algorithm is an algorithm that can works in real time and provides reasonable results as demonstrated in the [video][vid_lbf]. The users can train their own model using a dataset which contains large amount of training samples.
 
-A [trained model][lbf_model] is provided for the user for their convenience. This model delivers reasonable result as demonstrated in the [video][vid_lbf].
+A [trained model][lbf_model] based on [HELEN dataset][helen] is provided for the user for their convenience. This model delivers reasonable result as demonstrated in the [video][vid_lbf].
 
 Here is the snippet of code demonstrating the utilization of the [trained model][lbf_model] for detecting the facial landmarks points on a given face image:
 
@@ -316,8 +318,10 @@ facemark->fit(image, faces, landmarks);
 [pull_request]: https://github.com/opencv/opencv_contrib/pull/1257
 [codes]: https://github.com/opencv/opencv_contrib/pull/1257/files
 [commits]: https://github.com/opencv/opencv_contrib/pull/1257/commits
-[documentation]: http://pullrequest.opencv.org/buildbot/export/pr_contrib/1257/docs/db/dd8/classcv_1_1face_1_1Facemark.html
-[tutorials]: http://pullrequest.opencv.org/buildbot/export/pr_contrib/1257/docs/d5/d47/tutorial_table_of_content_facemark.html
+[documentation]: https://docs.opencv.org/3.4.10/db/dd8/classcv_1_1face_1_1Facemark.html
+[tutorials]: https://docs.opencv.org/3.4.10/d5/d47/tutorial_table_of_content_facemark.html
 [aam_code_ori]: https://ibug.doc.ic.ac.uk/download/tzimiro_iccv2013_code.zip
 [lbf_cod_ori]: https://github.com/luoyetx/face-alignment-at-3000fps
 [lbf_model]: https://raw.githubusercontent.com/kurnianggoro/GSOC2017/master/data/lbfmodel.yaml
+[helen]: http://www.ifp.illinois.edu/~vuongle2/helen/
+[merged]: https://github.com/opencv/opencv_contrib/tree/master/modules/face
